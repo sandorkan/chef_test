@@ -5,7 +5,10 @@
 </head>
 
 <body>
-	<h1>Hello from <%= node["fqdn"] %>!</h1>
+	<h1>Welcome to <%= node["company"] %>!</h1>
+	
+	<h2>Hello from <%= node["fqdn"] %>!</h2>
+	
 	<p>
 		This server has <%= node["memory"]["total"].to_i / 1024 %> MB of memory
 		</br>
@@ -15,7 +18,7 @@
 		</br></br>
 		But wait.. there is more.. yes.. you read correclty.. there is more
 		</br></br>
-		The interface eth0 has a maxiumum transmission unit of <%= node["network"]["interfaces"]["eth1"]["mtu"] %> bytes
+		The interface eth0 has a maximum transmission unit of <%= node["network"]["interfaces"]["eth1"]["mtu"] %> bytes
 		</br>
 		
 	</p>
